@@ -1,0 +1,19 @@
+{
+  "name": "khairat-web",
+  "author": "Ali Zahid <ali.zahid@live.com> (https://designplox.com/)",
+  "description": "Khairat is the first transparent charity framework",
+  "license": "MIT",
+  "private": true,
+  "repository": "https://github.com/givekhairat/khairat-web",
+  "scripts": {
+    "build": "gulp",
+    "dev": "gulp dev"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-clean-css": "^3.10.0",
+    "gulp-connect": "^5.5.0",
+    "gulp-sass": "^4.0.1"
+  }
+}

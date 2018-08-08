@@ -1,0 +1,22 @@
+@keyframes content {
+  50%,
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+header {
+  animation: content 0.4s linear;
+}
+
+main {
+  animation: content 0.8s linear;
+}
+
+footer {
+  animation: content 1.2s linear;
+}

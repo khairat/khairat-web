@@ -1,0 +1,180 @@
+@import 'variables';
+@import 'responsive';
+@import 'animations';
+
+*,
+*:after,
+*:before {
+  border-radius: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: $background;
+  color: $color;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  font: normal 1.25em/1 -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  text-align: center;
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:active,
+  &:hover {
+    color: $color;
+  }
+}
+
+h1,
+h2 {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  vertical-align: top;
+}
+
+p {
+  line-height: 1.6;
+  margin: 1em auto;
+}
+
+// layout
+
+footer,
+header,
+main {
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  div {
+    border-bottom: 1px solid $border;
+    padding: $space;
+
+    h1 {
+      text-transform: lowercase;
+    }
+
+    img {
+      height: 6em;
+    }
+
+    p {
+      margin: $space auto 0;
+      max-width: $max;
+    }
+  }
+}
+
+main {
+  section {
+    border-bottom: 1px solid $border;
+    padding: $space;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    &.how-it-works {
+      div {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: $space auto 0;
+        max-width: $max;
+
+        img {
+          height: 6em;
+        }
+
+        p {
+          flex: 1;
+        }
+      }
+    }
+
+    &.features {
+    }
+
+    &.story {
+      img {
+        margin-bottom: $space / 2;
+      }
+
+      p {
+        margin-bottom: 0;
+        max-width: $max;
+      }
+    }
+  }
+
+  img {
+    height: 100px;
+  }
+}
+
+footer {
+  align-items: center;
+  padding: $space;
+
+  p {
+    margin: 0;
+  }
+
+  aside {
+    display: flex;
+    margin-top: 1em;
+
+    a {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 1.5em auto;
+      height: 2em;
+      width: 2em;
+
+      &:active,
+      &:hover {
+        filter: contrast(2);
+      }
+
+      &:not(:first-child) {
+        margin-left: 1em;
+      }
+
+      &.dribbble {
+        background-image: url('/assets/img/social/dribbble.svg');
+      }
+
+      &.github {
+        background-image: url('/assets/img/social/github.svg');
+      }
+
+      &.twitter {
+        background-image: url('/assets/img/social/twitter.svg');
+      }
+    }
+  }
+}
